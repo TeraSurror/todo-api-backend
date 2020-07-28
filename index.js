@@ -32,7 +32,10 @@ app.get('/', (req, res) => {
     });
 });
 
+// Custom routes for login and registration
 app.use('/app/agent', require('./routes/auth'));
+
+// Custom routes for adding and listing tasks
 app.use('/app/sites', require('./routes/task'));
 
 app.listen(3000, () => console.log('Listening on 3000'));

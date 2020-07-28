@@ -8,6 +8,7 @@ const db = mysql.createConnection({
     database: 'todolist'
 });
 
+// Logic for adding tasks
 exports.addTask = (req, res) => {
     let agent_id = req.query.agent;
     console.log(agent_id);
@@ -41,6 +42,7 @@ exports.addTask = (req, res) => {
     });
 };
 
+// Logic for viewing tasks
 exports.viewTask = (req, res) => {
     let agent_id = req.query.agent;
 

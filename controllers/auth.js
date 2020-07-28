@@ -8,6 +8,7 @@ const db = mysql.createConnection({
     database: 'todolist'
 });
 
+// Registration logic
 exports.register = (req, res) => {
     const { agent_id, password } = req.body;
 
@@ -37,7 +38,7 @@ exports.register = (req, res) => {
     });
 };
 
-
+// Login logic
 exports.login = (req, res) => {
     try {
         
